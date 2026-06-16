@@ -4,6 +4,8 @@ A weather app that answers natural-language questions about outdoor activities. 
 
 Built as part of the Prepr Frontend Challenge.
 
+**Live demo:** [outlook-weather.netlify.app](https://outlook-weather.netlify.app)
+
 ---
 
 ## Setup
