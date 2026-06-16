@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
-import iconPin from './assets/icon-pin.svg'
-import iconDropdown from './assets/icon-dropdown.svg'
-import { geocode } from './weather'
+import iconPin from '../assets/icon-pin.svg'
+import iconDropdown from '../assets/icon-dropdown.svg'
+import { geocode } from '../utils/weather'
 import './LocationPill.css'
 
 export default function LocationPill({ display, onChangeLocation, className = '' }) {

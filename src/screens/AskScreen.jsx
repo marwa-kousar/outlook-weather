@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import iconRun from './assets/icon-run.svg'
-import LocationPill from './LocationPill'
-import iconBike from './assets/icon-bike.svg'
-import iconParty from './assets/icon-party.svg'
-import iconCanoe from './assets/icon-canoe.svg'
+import iconRun from '../assets/icon-run.svg'
+import LocationPill from '../components/LocationPill'
+import iconBike from '../assets/icon-bike.svg'
+import iconParty from '../assets/icon-party.svg'
+import iconCanoe from '../assets/icon-canoe.svg'
 import './AskScreen.css'
 
 const SUGGESTIONS = [

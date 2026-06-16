@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import locationBg from './assets/location-bg.png'
-import iconSearch from './assets/icon-search.svg'
-import iconLocation from './assets/icon-location.svg'
-import { geocode, reverseGeocode } from './weather'
+import locationBg from '../assets/location-bg.png'
+import iconSearch from '../assets/icon-search.svg'
+import iconLocation from '../assets/icon-location.svg'
+import { geocode, reverseGeocode } from '../utils/weather'
 import './LocationSearch.css'
 
 export default function LocationSearch({ onNext }) {

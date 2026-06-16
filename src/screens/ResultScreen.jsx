@@ -1,17 +1,17 @@
 import { useMemo } from 'react'
-import { WeatherLoadingState, WeatherErrorState } from './WeatherState'
-import iconRunner from './assets/icon-runner.svg'
-import LocationPill from './LocationPill'
-import iconRun from './assets/icon-run.svg'
-import iconBike from './assets/icon-bike.svg'
-import iconParty from './assets/icon-party.svg'
-import iconCanoe from './assets/icon-canoe.svg'
-import scoreCircle from './assets/score-circle.svg'
-import iconStatTemp from './assets/icon-stat-temp.svg'
-import iconStatPrecip from './assets/icon-stat-precip.svg'
-import iconStatWind from './assets/icon-stat-wind.svg'
-import iconStatHumidity from './assets/icon-stat-humidity.svg'
-import iconStatUV from './assets/icon-stat-uv.svg'
+import { WeatherLoadingState, WeatherErrorState } from '../components/WeatherState'
+import iconRunner from '../assets/icon-runner.svg'
+import LocationPill from '../components/LocationPill'
+import iconRun from '../assets/icon-run.svg'
+import iconBike from '../assets/icon-bike.svg'
+import iconParty from '../assets/icon-party.svg'
+import iconCanoe from '../assets/icon-canoe.svg'
+import scoreCircle from '../assets/score-circle.svg'
+import iconStatTemp from '../assets/icon-stat-temp.svg'
+import iconStatPrecip from '../assets/icon-stat-precip.svg'
+import iconStatWind from '../assets/icon-stat-wind.svg'
+import iconStatHumidity from '../assets/icon-stat-humidity.svg'
+import iconStatUV from '../assets/icon-stat-uv.svg'
 
 const STAT_ICONS = {
   Temperature: iconStatTemp,
@@ -20,7 +20,7 @@ const STAT_ICONS = {
   Humidity: iconStatHumidity,
   'UV Index': iconStatUV,
 }
-import { scoreQuery } from './weather'
+import { scoreQuery } from '../utils/weather'
 import './ResultScreen.css'
 
 const ACTIVITY_ICON = {

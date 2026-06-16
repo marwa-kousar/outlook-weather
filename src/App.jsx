@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import weatherIcon from './assets/outlook-logo.png'
 import desktopScene from './assets/outlook-bg-desktop.png'
-import LocationSearch from './LocationSearch'
-import AskScreen from './AskScreen'
-import ResultScreen from './ResultScreen'
-import ForecastScreen from './ForecastScreen'
-import FullForecastScreen from './FullForecastScreen'
-import { fetchWeather, parseWeather } from './weather'
+import LocationSearch from './screens/LocationSearch'
+import AskScreen from './screens/AskScreen'
+import ResultScreen from './screens/ResultScreen'
+import ForecastScreen from './screens/ForecastScreen'
+import FullForecastScreen from './screens/FullForecastScreen'
+import { fetchWeather, parseWeather } from './utils/weather'
 import './App.css'
 
 function App() {

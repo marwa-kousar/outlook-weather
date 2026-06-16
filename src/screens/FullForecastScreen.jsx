@@ -1,7 +1,7 @@
-import { getWeatherIcon } from './weatherIcons'
-import LocationPill from './LocationPill'
-import useCurrentTime from './useCurrentTime'
-import { WeatherLoadingState, WeatherErrorState } from './WeatherState'
+import { getWeatherIcon } from '../utils/weatherIcons'
+import LocationPill from '../components/LocationPill'
+import useCurrentTime from '../hooks/useCurrentTime'
+import { WeatherLoadingState, WeatherErrorState } from '../components/WeatherState'
 import './FullForecastScreen.css'
 
 export default function FullForecastScreen({ weather, weatherLoading, weatherError, location, onBack, onChangeLocation, onRetry }) {
