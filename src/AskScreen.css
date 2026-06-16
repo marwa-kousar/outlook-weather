@@ -1,0 +1,326 @@
+/* ── Page shell ── */
+.ask-page {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #121744 0%, #873aa6 100%);
+}
+
+/* ── Shared element styles ── */
+
+/* .ask-pill is now a positioning-only class applied to LocationPill's wrapper */
+
+.ask-heading {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.205;
+  letter-spacing: -0.3713px;
+  color: #ffffff;
+}
+
+.ask-subtitle {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ask-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #4f327b;
+  border-radius: 20px;
+  padding: 0 14px 0 17px;
+}
+
+.ask-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.3713px;
+  color: #ffffff;
+  line-height: 1.4;
+  min-width: 0;
+}
+
+.ask-input::placeholder {
+  color: #a896c3;
+}
+
+.ask-send {
+  width: 33px;
+  height: 33px;
+  background: #d9d9d9;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1242;
+  transition: filter 0.2s ease;
+}
+
+.ask-send:hover {
+  filter: brightness(0.92);
+}
+
+.ask-send-icon {
+  width: 14px;
+  height: auto;
+}
+
+.ask-try-label {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ask-chips {
+  display: flex;
+  flex-direction: column;
+}
+
+.ask-chip {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: left;
+  transition: filter 0.2s ease;
+  padding: 0 16px 0 17px;
+}
+
+.ask-chip:hover {
+  filter: brightness(1.1);
+}
+
+.ask-chip:focus-visible {
+  outline: 2px solid #fff4a6;
+  outline-offset: 2px;
+}
+
+.ask-chip-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-right: 9px;
+}
+
+.ask-chip span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Mobile layout ── */
+
+.ask-mobile {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+}
+
+/* All mobile elements use absolute positioning with svh-based vertical coords */
+
+.ask-mobile .ask-pill {
+  position: absolute;
+  top: 6.69svh;   /* 57 / 852 */
+  left: 30px;
+}
+
+.ask-mobile .ask-heading {
+  position: absolute;
+  top: 14.2svh;   /* 121 / 852 */
+  left: 30px;
+  font-size: clamp(26px, 8.1vw, 32px);
+}
+
+.ask-mobile .ask-subtitle {
+  position: absolute;
+  top: 25.35svh;  /* 216 / 852 */
+  left: 30px;
+  font-size: clamp(13px, 4.1vw, 16px);
+}
+
+.ask-mobile .ask-input-wrap {
+  position: absolute;
+  top: 34.04svh;  /* 290 / 852 */
+  left: 30px;
+  width: min(341px, calc(100vw - 52px));
+  height: 58px;
+}
+
+.ask-mobile .ask-input {
+  font-size: clamp(13px, 4.1vw, 16px);
+}
+
+.ask-mobile .ask-try-label {
+  position: absolute;
+  top: 45.07svh;  /* 384 / 852 */
+  left: 30px;
+}
+
+.ask-mobile .ask-chips {
+  position: absolute;
+  top: 49.65svh;  /* 423 / 852  — top of chip 1 */
+  left: 30px;
+  gap: 0;
+}
+
+/* Chip-specific widths, heights, bg colors, and gaps between chips */
+.ask-mobile .ask-chip-1 {
+  width: min(304px, 77.4vw);
+  height: 48px;
+  background: #60378b;
+  margin-bottom: 1.53svh; /* 13 / 852 */
+}
+
+.ask-mobile .ask-chip-2 {
+  width: min(236px, 60vw);
+  height: 48px;
+  background: #72429a;
+  margin-bottom: 1.53svh;
+}
+
+.ask-mobile .ask-chip-3 {
+  width: min(285px, 72.5vw);
+  height: 65px;
+  background: #723c91;
+  margin-bottom: 1.53svh;
+}
+
+.ask-mobile .ask-chip-4 {
+  width: min(285px, 72.5vw);
+  height: 65px;
+  background: #7f489e;
+}
+
+.ask-mobile .ask-chip span {
+  font-size: clamp(13px, 4.1vw, 16px);
+}
+
+/* ── Desktop hidden by default ── */
+
+.ask-desktop {
+  display: none;
+}
+
+/* ── Desktop layout ── */
+
+@media (min-width: 901px) {
+  .ask-mobile { display: none; }
+  .ask-page { height: 100svh; }
+  .ask-page::before { display: none; }
+
+  .ask-desktop {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px max(60px, 8vw);
+    padding-top: max(80px, 10vh);
+    box-sizing: border-box;
+  }
+
+  .ask-desktop .ask-pill {
+    margin-bottom: 36px;
+  }
+
+  /* Two-column grid */
+  .ask-d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+  }
+
+  .ask-d-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ask-desktop .ask-heading {
+    font-size: clamp(38px, 3.4vw, 56px);
+    margin: 0 0 18px;
+    line-height: 1.15;
+  }
+
+  .ask-desktop .ask-subtitle {
+    font-size: clamp(15px, 1.2vw, 19px);
+    margin: 0 0 36px;
+  }
+
+  .ask-desktop .ask-input-wrap {
+    height: 64px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .ask-desktop .ask-input {
+    font-size: 16px;
+  }
+
+  /* Right column */
+  .ask-d-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: clamp(32px, 4vw, 60px);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .ask-desktop .ask-try-label {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 18px;
+  }
+
+  .ask-d-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Uniform chips on desktop — no staggered widths */
+  .ask-desktop .ask-chip-1,
+  .ask-desktop .ask-chip-2,
+  .ask-desktop .ask-chip-3,
+  .ask-desktop .ask-chip-4 {
+    width: 100%;
+    height: 58px;
+    border-radius: 16px;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .ask-desktop .ask-chip-1 { background: #60378b; }
+  .ask-desktop .ask-chip-2 { background: #72429a; }
+  .ask-desktop .ask-chip-3 { background: #723c91; }
+  .ask-desktop .ask-chip-4 { background: #7f489e; }
+
+  .ask-desktop .ask-chip span {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}

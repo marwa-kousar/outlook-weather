@@ -1,0 +1,422 @@
+/* ── Page shell ── */
+.fc-page {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #121744 0%, #873aa6 100%);
+}
+
+/* ── Shared element styles ── */
+
+/* .fc-pill is now a positioning-only class applied to LocationPill's wrapper */
+
+.fc-top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.fc-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fc-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px 6px 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.18s ease;
+  flex-shrink: 0;
+}
+
+.fc-back-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.fc-back-arrow {
+  width: 13px;
+  height: auto;
+}
+
+.fc-datetime {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fc-section-heading {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: white;
+}
+
+/* ── Weather card ── */
+
+.fc-card {
+  background: #3c2674;
+  border-radius: 15px;
+  width: min(331px, calc(100vw - 60px));
+  height: 208px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fc-sun-large {
+  position: absolute;
+  width: 81px;
+  height: 81px;
+  top: 23px;
+  left: 19px;
+}
+
+.fc-card-main {
+  position: absolute;
+  top: 23px;
+  left: 117px;
+}
+
+.fc-temp {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.fc-feels-like,
+.fc-condition {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.fc-card-divider {
+  position: absolute;
+  top: 131px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 302px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fc-card-stats {
+  position: absolute;
+  top: 141px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.fc-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* fixed column widths to match Figma positions */
+.fc-card-stat:nth-child(1) { width: 82px; padding-left: 0; }
+.fc-card-stat:nth-child(2) { width: 88px; }
+.fc-card-stat:nth-child(3) { width: 86px; }
+.fc-card-stat:nth-child(4) { flex: 1; }
+
+.fc-stat-val {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: white;
+}
+
+.fc-stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: #b1a6cf;
+}
+
+/* ── Hourly forecast ── */
+
+.fc-hourly-list {
+  display: flex;
+}
+
+.fc-hourly-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 64px;
+}
+
+.fc-hourly-time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.fc-sun-small {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+.fc-hourly-temp {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: white;
+}
+
+/* ── See full forecast link ── */
+
+.fc-see-forecast {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  -webkit-appearance: none;
+}
+
+.fc-see-forecast span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: #ffbd03;
+}
+
+.fc-see-arrow {
+  width: 14px;
+  height: auto;
+  color: #ffbd03;
+}
+
+/* ── Ask another question bar ── */
+
+.fc-ask-bar {
+  background: #9350b1;
+  border-radius: 20px;
+  height: 58px;
+  width: min(341px, calc(100vw - 52px));
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 17px;
+  box-sizing: border-box;
+}
+
+.fc-ask-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.3713px;
+  color: white;
+  min-width: 0;
+}
+
+.fc-ask-input::placeholder {
+  color: #cbb5d5;
+}
+
+.fc-ask-send {
+  width: 33px;
+  height: 33px;
+  background: #d9d9d9;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1242;
+  transition: filter 0.2s ease;
+}
+
+.fc-ask-send:hover {
+  filter: brightness(0.92);
+}
+
+.fc-ask-arrow {
+  width: 13px;
+  height: auto;
+}
+
+/* ── Mobile layout ── */
+
+.fc-mobile {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 52px 28px 48px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1;
+  gap: 14px;
+}
+
+.fc-mobile .fc-top-bar       { margin-bottom: 18px; }
+.fc-mobile .fc-card          { margin-bottom: 4px; }
+.fc-mobile .fc-ask-bar       { align-self: center; margin-top: auto; }
+
+/* ── Desktop hidden by default ── */
+
+.fc-desktop {
+  display: none;
+}
+
+/* ── Desktop layout ── */
+
+@media (min-width: 901px) {
+  .fc-mobile { display: none; }
+  .fc-page { height: 100svh; }
+  .fc-page::before { display: none; }
+
+  .fc-desktop {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px max(60px, 8vw);
+    box-sizing: border-box;
+  }
+
+  .fc-desktop .fc-pill {
+    margin-bottom: 4px;
+  }
+
+  .fc-desktop .fc-datetime {
+    margin-bottom: 24px;
+  }
+
+  /* Two-column grid: card on left, hourly on right */
+  .fc-d-grid {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: clamp(40px, 5vw, 72px);
+    align-items: start;
+    margin-bottom: 28px;
+  }
+
+  .fc-d-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .fc-desktop .fc-card {
+    width: 331px;
+    flex-shrink: 0;
+  }
+
+  /* Right column: vertical hourly list */
+  .fc-d-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: clamp(32px, 4vw, 56px);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .fc-d-right .fc-section-heading {
+    margin-bottom: 18px;
+  }
+
+  .fc-d-hourly {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fc-d-hourly-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+  }
+
+  .fc-d-hourly-item .fc-sun-small {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .fc-d-hourly-item .fc-hourly-time {
+    width: 56px;
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+
+  .fc-d-hourly-item .fc-hourly-temp {
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* Footer: upcoming + ask bar side by side */
+  .fc-d-footer {
+    display: flex;
+    align-items: center;
+    gap: clamp(40px, 5vw, 80px);
+  }
+
+  .fc-d-upcoming {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .fc-desktop .fc-ask-bar {
+    position: static;
+    transform: none;
+    flex: 1;
+    max-width: 540px;
+  }
+}

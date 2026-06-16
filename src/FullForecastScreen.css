@@ -1,0 +1,285 @@
+/* ── Page shell ── */
+.ff-page {
+  min-height: 100svh;
+  background: linear-gradient(180deg, #121744 0%, #873aa6 100%);
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+.ff-heading {
+  margin: 0 0 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.37px;
+  color: white;
+}
+
+/* ── Top bar (pill + back) ── */
+.ff-top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 48px 28px 0;
+}
+
+.ff-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ff-datetime {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ff-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px 6px 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.18s ease;
+}
+
+.ff-back-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ff-back-arrow {
+  width: 13px;
+  height: auto;
+}
+
+/* ── Hourly horizontal scroll ── */
+.ff-hourly-scroll {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.ff-hourly-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.ff-hourly-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 60px;
+  padding: 10px 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.ff-hourly-time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.ff-hourly-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.ff-hourly-temp {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ── 7-day daily list ── */
+.ff-daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ff-daily-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ff-daily-row:last-child {
+  border-bottom: none;
+}
+
+.ff-day-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  width: 74px;
+  flex-shrink: 0;
+}
+
+.ff-daily-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.ff-daily-condition {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+}
+
+.ff-daily-temps {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ff-temp-max {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  width: 36px;
+  text-align: right;
+}
+
+.ff-temp-sep {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.ff-temp-min {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  width: 36px;
+}
+
+.ff-daily-precip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 52px;
+}
+
+.ff-drop-icon {
+  width: 9px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.ff-daily-precip span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #42ADE2;
+}
+
+/* ── Mobile layout ── */
+.ff-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.ff-mobile .ff-top-bar {
+  margin-bottom: 32px;
+}
+
+.ff-mobile .ff-heading {
+  padding: 0 28px;
+}
+
+.ff-mobile .ff-hourly-scroll {
+  padding: 0 28px 6px;
+  margin-bottom: 32px;
+}
+
+.ff-mobile .ff-daily-list {
+  padding: 0 28px;
+  margin-bottom: 40px;
+}
+
+.ff-desktop {
+  display: none;
+}
+
+/* ── Desktop layout ── */
+@media (min-width: 901px) {
+  .ff-mobile { display: none; }
+
+  .ff-desktop {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    padding: 0 max(60px, 8vw) 48px;
+    box-sizing: border-box;
+  }
+
+  .ff-d-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    margin-bottom: 36px;
+  }
+
+  .ff-d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .ff-d-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ff-d-col-right {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: clamp(32px, 4vw, 56px);
+  }
+
+  /* On desktop the hourly scroll becomes a tighter grid */
+  .ff-desktop .ff-hourly-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 8px;
+    overflow-x: visible;
+  }
+
+  .ff-desktop .ff-hourly-item {
+    min-width: unset;
+  }
+
+  .ff-desktop .ff-daily-row {
+    padding: 12px 0;
+  }
+}

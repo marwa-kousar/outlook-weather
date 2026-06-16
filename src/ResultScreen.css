@@ -1,0 +1,355 @@
+/* ── Page shell ── */
+.res-page {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #121744 0%, #873aa6 100%);
+}
+
+/* ── Shared element styles ── */
+
+/* .res-pill is now a positioning-only class applied to LocationPill's wrapper */
+
+
+.res-bubble {
+  background: #326c70;
+  border-radius: 20px;
+  min-height: 48px;
+  padding: 10px 12px 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(266px, 67.7vw);
+  border: none;
+  cursor: pointer;
+  transition: filter 0.18s ease;
+}
+
+.res-bubble:hover {
+  filter: brightness(1.12);
+}
+
+.res-bubble p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(13px, 4.1vw, 16px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: white;
+  text-align: right;
+  flex: 1;
+}
+
+.res-bubble-edit {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.res-short-label {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.res-answer-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.res-yes {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: #8bd7aa;
+}
+
+.res-yes[data-tier="mid"] { color: #ffbd03; }
+.res-yes[data-tier="low"] { color: #f08080; }
+
+.res-runner {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.res-description {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.res-score-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.res-score-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.res-score-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res-score-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1;
+}
+
+.res-score-denom {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.res-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.res-stat {
+  display: grid;
+  /* icon | label | value | rating — label is fixed so value aligns at ~221px from screen */
+  grid-template-columns: 26px 173px 56px 1fr;
+  column-gap: 11px;
+  align-items: center;
+}
+
+.res-stat-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.res-stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.res-stat-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: white;
+}
+
+.res-stat-rating {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.3713px;
+  color: #8bd7aa;
+}
+
+.res-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  background: #f3ad61;
+  border-radius: 20px;
+  height: 46px;
+  width: min(341px, calc(100vw - 52px));
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3713px;
+  color: #0d0b5d;
+  transition: filter 0.2s ease;
+}
+
+.res-cta:hover {
+  filter: brightness(0.95);
+}
+
+.res-cta-arrow {
+  width: 14px;
+  height: auto;
+  color: #0d0b5d;
+}
+
+/* ── Mobile layout ── */
+
+.res-mobile {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 52px 28px 48px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.res-mobile .res-bubble   { align-self: flex-end; margin-top: 32px; margin-bottom: 18px; }
+.res-mobile .res-short-label { margin-bottom: 6px; }
+.res-mobile .res-answer-row  { margin-bottom: 10px; }
+.res-mobile .res-description { margin-bottom: 24px; max-width: 260px; }
+.res-mobile .res-score-wrap  { align-self: center; margin-bottom: 22px; }
+.res-mobile .res-stats       { margin-bottom: 28px; }
+.res-mobile .res-cta         { align-self: center; }
+
+/* ── Desktop hidden by default ── */
+
+.res-desktop {
+  display: none;
+}
+
+/* ── Desktop layout ── */
+
+@media (min-width: 901px) {
+  .res-mobile { display: none; }
+  .res-page { height: 100svh; }
+  .res-page::before { display: none; }
+
+  .res-desktop {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px max(60px, 8vw);
+    box-sizing: border-box;
+  }
+
+  .res-desktop .res-pill {
+    margin-bottom: 4px;
+  }
+
+  .res-desktop .res-datetime {
+    margin-bottom: 32px;
+  }
+
+  /* Two-column grid */
+  .res-d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+    margin-bottom: 36px;
+  }
+
+  /* Left column: conversation */
+  .res-d-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .res-desktop .res-bubble {
+    align-self: flex-end;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    min-height: 48px;
+    padding: 12px 18px;
+    margin-bottom: 28px;
+  }
+
+  .res-desktop .res-bubble p {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .res-desktop .res-short-label {
+    margin-bottom: 4px;
+  }
+
+  .res-desktop .res-answer-row {
+    margin-bottom: 14px;
+  }
+
+  .res-desktop .res-yes {
+    font-size: 42px;
+  }
+
+  .res-desktop .res-runner {
+    width: 36px;
+    height: 36px;
+  }
+
+  .res-desktop .res-description {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* Right column: score + stats */
+  .res-d-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: clamp(32px, 4vw, 60px);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .res-desktop .res-score-wrap {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 28px;
+  }
+
+  .res-desktop .res-score-num {
+    font-size: 52px;
+  }
+
+  .res-desktop .res-stats {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .res-desktop .res-stat {
+    grid-template-columns: 26px 1fr 80px 70px;
+    column-gap: 14px;
+  }
+
+  /* CTA centered below grid */
+  .res-d-cta {
+    position: static;
+    transform: none;
+    align-self: center;
+    width: min(380px, 40%);
+  }
+}
