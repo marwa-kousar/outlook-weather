@@ -94,4 +94,4 @@ src/
 
 ## AI usage
 
-Claude (Anthropic) was used to accelerate implementation — writing components, CSS layouts, and API integration. All product decisions were made independently: the scoring logic, the activity detection scope, the screen flow, the UX choices (inline location pill, tappable question bubble, ask bar routing), and the iterative fixes throughout the build.
+AI was used to help brainstorm ideas and speed up parts of the development process. I built the components and implemented the application myself, including the user flow, UI/UX decisions, recommendation logic, and overall product experience.
